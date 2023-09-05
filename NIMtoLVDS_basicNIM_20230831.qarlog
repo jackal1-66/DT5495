@@ -1,0 +1,27 @@
+Quartus II Archive log --	/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/NIMtoLVDS_basicNIM_20230831.qarlog
+
+Archive:	/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/NIMtoLVDS_basicNIM_20230831.qar
+Date:		Thu Aug 31 18:13:37 2023
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/RPDGen.tcl
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/V2495user.sdc
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/V2495user_template.qpf
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/V2495user_template.qsf
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/assignment_defaults.qdf
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/db/V2495user_template.cmp.hdb
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/db/V2495user_template.db_info
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/db/local_bus_auto_stripped.stp
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/incremental_db/compiled_partitions/V2495user_template.db_info
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/local_bus.stp
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/V2495.vhd
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/V2495_package.vhd
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/gd_control.vhd
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/lb_int.vhd
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/spi_interface.vhd
+/home/mgiacalo/OneDrive/Assegno2022/EIC/NIM to LVDS/NIMtoLVDS/src/spi_master.vhd
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,748 @@
+ -- Copyright (C) 1991-2013 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V, 3.0V or 3.3V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.1V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 3A:		3.3V
+ --					Bank 3B:		3.3V
+ --					Bank 4A:		3.3V
+ --					Bank 5A:		3.3V
+ --					Bank 5B:		3.3V
+ --					Bank 6A:		3.3V
+ --					Bank 7A:		3.3V
+ --					Bank 8A:	3.3V
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --           	    either individually through a 10k Ohm resistor to GND or tie all pins
+ --           	    together and connect through a single 10k Ohm resistor to GND.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+CHIP  "V2495user_template"  ASSIGNED TO AN: 5CGXBC4C6F27C7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+MSEL2                        : A2        :        :                   :         : 9A        :                
+DNU                          : A3        :        :                   :         :           :                
+DNU                          : A4        :        :                   :         :           :                
+D[26]                        : A5        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+CONF_DONE                    : A6        :        :                   :         : 9A        :                
+D[27]                        : A7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+D[13]                        : A8        : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[29]                        : A9        : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : A10       : power  :                   : 3.3V    : 7A        :                
+D[30]                        : A11       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[15]                        : A12       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[31]                        : A13       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[20]                        : A14       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : A15       : gnd    :                   :         :           :                
+D[6]                         : A16       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[7]                         : A17       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+A[5]                         : A18       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[6]                         : A19       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : A20       : power  :                   : 3.3V    : 7A        :                
+A[24]                        : A21       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[25]                        : A22       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[26]                        : A23       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+nREADY                       : A24       : output : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : A25       : gnd    :                   :         :           :                
+GND                          : AA1       : gnd    :                   :         :           :                
+GND                          : AA2       : gnd    :                   :         :           :                
+GXB_NC                       : AA3       :        :                   :         : B0L       :                
+GXB_NC                       : AA4       :        :                   :         : B0L       :                
+GND                          : AA5       : gnd    :                   :         :           :                
+E[18]                        : AA6       : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+F[15]                        : AA7       : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+VCC_AUX                      : AA8       : power  :                   : 2.5V    :           :                
+VCCPGM                       : AA9       : power  :                   : 3.0V/3.3V :           :                
+VCCIO3B                      : AA10      : power  :                   : 3.3V    : 3B        :                
+VCCPD3B4A                    : AA11      : power  :                   : 3.3V    :           :                
+NC                           : AA12      :        :                   :         :           :                
+VCCPD3B4A                    : AA13      : power  :                   : 3.3V    :           :                
+GD_DELAYED[21]               : AA14      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AA15      : gnd    :                   :         :           :                
+GD_DELAYED[23]               : AA16      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCPD3B4A                    : AA17      : power  :                   : 3.3V    :           :                
+GD_DELAYED[24]               : AA18      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCPD3B4A                    : AA19      : power  :                   : 3.3V    :           :                
+VCCIO4A                      : AA20      : power  :                   : 3.3V    : 4A        :                
+SELE                         : AA21      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[9]                  : AA22      : output : 3.3-V LVTTL       :         : 5A        : Y              
+GD_DELAYED[9]                : AA23      : input  : 3.3-V LVTTL       :         : 5A        : Y              
+C[25]                        : AA24      : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : AA25      : gnd    :                   :         :           :                
+GD_DELAYED[2]                : AA26      : input  : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : AB1       :        :                   :         : B0L       :                
+GND                          : AB2       :        :                   :         : B0L       :                
+GND                          : AB3       : gnd    :                   :         :           :                
+GND                          : AB4       : gnd    :                   :         :           :                
+AS_DATA2, DATA2              : AB5       :        :                   :         : 3A        :                
+F[30]                        : AB6       : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+NC                           : AB7       :        :                   :         :           :                
+GND                          : AB8       : gnd    :                   :         :           :                
+VCCPD3A                      : AB9       : power  :                   : 3.3V    : 3A        :                
+F[7]                         : AB10      : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+B[22]                        : AB11      : input  : 3.3-V LVTTL       :         : 3B        : Y              
+B[5]                         : AB12      : input  : 3.3-V LVTTL       :         : 3B        : Y              
+VCCIO4A                      : AB13      : power  :                   : 3.3V    : 4A        :                
+VCC_AUX                      : AB14      : power  :                   : 2.5V    :           :                
+GD_START[22]                 : AB15      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[23]                 : AB16      : output : 3.3-V LVTTL       :         : 4A        : Y              
+B[18]                        : AB17      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AB18      : gnd    :                   :         :           :                
+C[31]                        : AB19      : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCC_AUX                      : AB20      : power  :                   : 2.5V    :           :                
+VCCPD3B4A                    : AB21      : power  :                   : 3.3V    :           :                
+C[28]                        : AB22      : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO5A                      : AB23      : power  :                   : 3.3V    : 5A        :                
+GD_DELAYED[8]                : AB24      : input  : 3.3-V LVTTL       :         : 5A        : Y              
+C[26]                        : AB25      : output : 3.3-V LVTTL       :         : 5B        : Y              
+GD_START[2]                  : AB26      : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : AC1       : gnd    :                   :         :           :                
+GND                          : AC2       : gnd    :                   :         :           :                
+GXB_NC                       : AC3       :        :                   :         : B0L       :                
+GXB_NC                       : AC4       :        :                   :         : B0L       :                
+GND                          : AC5       : gnd    :                   :         :           :                
+VCCIO3A                      : AC6       : power  :                   : 3.3V    : 3A        :                
+VREFB3AN0                    : AC7       : power  :                   :         : 3A        :                
+F[14]                        : AC8       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+F[22]                        : AC9       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+F[18]                        : AC10      : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : AC11      : gnd    :                   :         :           :                
+VREFB3BN0                    : AC12      : power  :                   :         : 3B        :                
+F[17]                        : AC13      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+B[2]                         : AC14      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[22]               : AC15      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : AC16      : power  :                   : 3.3V    : 4A        :                
+C[2]                         : AC17      : output : 3.3-V LVTTL       :         : 4A        : Y              
+B[0]                         : AC18      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+C[0]                         : AC19      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[6]                  : AC20      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AC21      : gnd    :                   :         :           :                
+GD_START[7]                  : AC22      : output : 3.3-V LVTTL       :         : 5A        : Y              
+GD_DELAYED[7]                : AC23      : input  : 3.3-V LVTTL       :         : 5A        : Y              
+GD_START[8]                  : AC24      : output : 3.3-V LVTTL       :         : 5A        : Y              
+C[27]                        : AC25      : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : AC26      : gnd    :                   :         :           :                
+GND                          : AD1       :        :                   :         : B0L       :                
+GND                          : AD2       :        :                   :         : B0L       :                
+GND                          : AD3       : gnd    :                   :         :           :                
+GND                          : AD4       : gnd    :                   :         :           :                
+AS_DATA1, DATA1              : AD5       :        :                   :         : 3A        :                
+F[29]                        : AD6       : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+F[12]                        : AD7       : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+F[11]                        : AD8       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+VCCIO3B                      : AD9       : power  :                   : 3.3V    : 3B        :                
+F[6]                         : AD10      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[21]                        : AD11      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[20]                        : AD12      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[2]                         : AD13      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AD14      : gnd    :                   :         :           :                
+VREFB4AN0                    : AD15      : power  :                   :         : 4A        :                
+C[3]                         : AD16      : output : 3.3-V LVTTL       :         : 4A        : Y              
+B[17]                        : AD17      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+C[1]                         : AD18      : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : AD19      : power  :                   : 3.3V    : 4A        :                
+GD_DELAYED[6]                : AD20      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[25]                 : AD21      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[25]               : AD22      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+C[14]                        : AD23      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AD24      : gnd    :                   :         :           :                
+C[12]                        : AD25      : output : 3.3-V LVTTL       :         : 5B        : Y              
+GD_START[1]                  : AD26      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AE1       : gnd    :                   :         :           :                
+GND                          : AE2       : gnd    :                   :         :           :                
+GXB_NC                       : AE3       :        :                   :         : B0L       :                
+GXB_NC                       : AE4       :        :                   :         : B0L       :                
+GND                          : AE5       : gnd    :                   :         :           :                
+F[13]                        : AE6       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : AE7       : gnd    :                   :         :           :                
+F[27]                        : AE8       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+LED[1]                       : AE9       : output : 3.3-V LVTTL       :         : 3B        : Y              
+SELG                         : AE10      : output : 3.3-V LVTTL       :         : 4A        : Y              
+F[5]                         : AE11      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : AE12      : power  :                   : 3.3V    : 4A        :                
+F[19]                        : AE13      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[16]                        : AE14      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[0]                         : AE15      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+B[1]                         : AE16      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AE17      : gnd    :                   :         :           :                
+GD_START[18]                 : AE18      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[19]                 : AE19      : output : 3.3-V LVTTL       :         : 4A        : Y              
+C[30]                        : AE20      : output : 3.3-V LVTTL       :         : 4A        : Y              
+C[29]                        : AE21      : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : AE22      : power  :                   : 3.3V    : 4A        :                
+C[15]                        : AE23      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[20]                 : AE24      : output : 3.3-V LVTTL       :         : 4A        : Y              
+C[13]                        : AE25      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[1]                : AE26      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AF2       : gnd    :                   :         :           :                
+GND                          : AF3       : gnd    :                   :         :           :                
+GND                          : AF4       : gnd    :                   :         :           :                
+AS_DATA0, ASDO, DATA0        : AF5       :        :                   :         : 3A        :                
+F[28]                        : AF6       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+GOUT[1]                      : AF7       : output : 3.3-V LVTTL       :         : 3B        : Y              
+GOUT[0]                      : AF8       : output : 3.3-V LVTTL       :         : 3B        : Y              
+LED[2]                       : AF9       : output : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : AF10      : gnd    :                   :         :           :                
+nOEG                         : AF11      : output : 3.3-V LVTTL       :         : 4A        : Y              
+F[4]                         : AF12      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[3]                         : AF13      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[1]                         : AF14      : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : AF15      : power  :                   : 3.3V    : 4A        :                
+nOEF                         : AF16      : output : 3.3-V LVTTL       :         : 4A        : Y              
+IDE[0]                       : AF17      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[18]               : AF18      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[19]               : AF19      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AF20      : gnd    :                   :         :           :                
+GD_START[0]                  : AF21      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[0]                : AF22      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[20]               : AF23      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+SELF                         : AF24      : output : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : AF25      : gnd    :                   :         :           :                
+RREF                         : B1        :        :                   :         :           :                
+GND                          : B2        : gnd    :                   :         :           :                
+GND                          : B3        : gnd    :                   :         :           :                
+GND                          : B4        : gnd    :                   :         :           :                
+nSTATUS                      : B5        :        :                   :         : 9A        :                
+D[25]                        : B6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+D[11]                        : B7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+GND                          : B8        : gnd    :                   :         :           :                
+D[12]                        : B9        : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[14]                        : B10       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[10]                        : B11       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[9]                         : B12       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : B13       : power  :                   : 3.3V    : 7A        :                
+D[4]                         : B14       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+A[4]                         : B15       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+VREFB7AN0                    : B16       : power  :                   :         : 7A        :                
+D[23]                        : B17       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : B18       : gnd    :                   :         :           :                
+A[22]                        : B19       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[23]                        : B20       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[7]                         : B21       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[8]                         : B22       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : B23       : power  :                   : 3.3V    : 7A        :                
+A[10]                        : B24       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[11]                        : B25       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+A[28]                        : B26       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : C1        : gnd    :                   :         :           :                
+GND                          : C2        : gnd    :                   :         :           :                
+NC                           : C3        :        :                   :         :           :                
+NC                           : C4        :        :                   :         :           :                
+GND                          : C5        : gnd    :                   :         :           :                
+VCCIO8A                      : C6        : power  :                   : 3.3V    : 8A        :                
+D[0]                         : C7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+VREFB8AN0                    : C8        : power  :                   :         : 8A        :                
+D[16]                        : C9        : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[1]                         : C10       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : C11       : gnd    :                   :         :           :                
+D[24]                        : C12       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+IDD[1]                       : C13       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+D[5]                         : C14       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[21]                        : C15       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : C16       : power  :                   : 3.3V    : 7A        :                
+A[21]                        : C17       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[4]                       : C18       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[7]                       : C19       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[6]                       : C20       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : C21       : gnd    :                   :         :           :                
+A[9]                         : C22       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[27]                        : C23       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+DNU                          : C24       :        :                   :         :           :                
+A[13]                        : C25       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+VCCIO6A                      : C26       : power  :                   : 3.3V    : 6A        :                
+NC                           : D1        :        :                   :         :           :                
+NC                           : D2        :        :                   :         :           :                
+GND                          : D3        : gnd    :                   :         :           :                
+GND                          : D4        : gnd    :                   :         :           :                
+nCE                          : D5        :        :                   :         : 9A        :                
+E[15]                        : D6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[31]                        : D7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[30]                        : D8        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+VCCIO8A                      : D9        : power  :                   : 3.3V    : 8A        :                
+D[17]                        : D10       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[2]                         : D11       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[8]                         : D12       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+D[3]                         : D13       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : D14       : gnd    :                   :         :           :                
+IDE[1]                       : D15       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+D[22]                        : D16       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[5]                       : D17       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+RESERVED_INPUT               : D18       :        :                   :         : 7A        :                
+VCCIO7A                      : D19       : power  :                   : 3.3V    : 7A        :                
+RESERVED_INPUT               : D20       :        :                   :         : 7A        :                
+LAD[8]                       : D21       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+A[12]                        : D22       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : D23       :        :                   :         : 7A        :                
+GND                          : D24       : gnd    :                   :         :           :                
+A[29]                        : D25       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+A[14]                        : D26       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : E1        : gnd    :                   :         :           :                
+GND                          : E2        : gnd    :                   :         :           :                
+NC                           : E3        :        :                   :         :           :                
+NC                           : E4        :        :                   :         :           :                
+GND                          : E5        : gnd    :                   :         :           :                
+E[14]                        : E6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+GND                          : E7        : gnd    :                   :         :           :                
+VCCBAT                       : E8        : power  :                   : 1.2V    :           :                
+A[16]                        : E9        : input  : 3.3-V LVTTL       :         : 8A        : Y              
+A[0]                         : E10       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+D[18]                        : E11       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCIO7A                      : E12       : power  :                   : 3.3V    : 7A        :                
+D[19]                        : E13       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCC_AUX                      : E14       : power  :                   : 2.5V    :           :                
+A[20]                        : E15       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[3]                       : E16       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : E17       : gnd    :                   :         :           :                
+RESERVED_INPUT               : E18       :        :                   :         : 7A        :                
+RESERVED_INPUT               : E19       :        :                   :         : 7A        :                
+RESERVED_INPUT               : E20       :        :                   :         : 7A        :                
+RESERVED_INPUT               : E21       :        :                   :         : 6A        :                
+VCCIO6A                      : E22       : power  :                   : 3.3V    : 6A        :                
+LAD[10]                      : E23       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+LAD[12]                      : E24       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+A[30]                        : E25       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+A[15]                        : E26       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+NC                           : F1        :        :                   :         :           :                
+NC                           : F2        :        :                   :         :           :                
+GND                          : F3        : gnd    :                   :         :           :                
+GND                          : F4        : gnd    :                   :         :           :                
+nCONFIG                      : F5        :        :                   :         : 9A        :                
+E[29]                        : F6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[26]                        : F7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+VCCPGM                       : F8        : power  :                   : 3.0V/3.3V :           :                
+VCCPD7A8A                    : F9        : power  :                   : 3.3V    :           :                
+GND                          : F10       : gnd    :                   :         :           :                
+VCCPD7A8A                    : F11       : power  :                   : 3.3V    :           :                
+A[18]                        : F12       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+VCCPD7A8A                    : F13       : power  :                   : 3.3V    :           :                
+DNU                          : F14       :        :                   :         :           :                
+VCCIO7A                      : F15       : power  :                   : 3.3V    : 7A        :                
+RESERVED_INPUT               : F16       :        :                   :         : 7A        :                
+VCCPD7A8A                    : F17       : power  :                   : 3.3V    :           :                
+RESERVED_INPUT               : F18       :        :                   :         : 7A        :                
+VCCPD7A8A                    : F19       : power  :                   : 3.3V    :           :                
+GND                          : F20       : gnd    :                   :         :           :                
+RESERVED_INPUT               : F21       :        :                   :         : 6A        :                
+LAD[9]                       : F22       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+LAD[11]                      : F23       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+A[31]                        : F24       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+VCCIO6A                      : F25       : power  :                   : 3.3V    : 6A        :                
+GD_START[5]                  : F26       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : G1        : gnd    :                   :         :           :                
+GND                          : G2        : gnd    :                   :         :           :                
+NC                           : G3        :        :                   :         :           :                
+NC                           : G4        :        :                   :         :           :                
+GND                          : G5        : gnd    :                   :         :           :                
+E[13]                        : G6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[10]                        : G7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+VCCIO8A                      : G8        : power  :                   : 3.3V    : 8A        :                
+VCC_AUX                      : G9        : power  :                   : 2.5V    :           :                
+A[17]                        : G10       : input  : 3.3-V LVTTL       :         : 8A        : Y              
+A[1]                         : G11       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[2]                         : G12       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : G13       : gnd    :                   :         :           :                
+A[3]                         : G14       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[2]                       : G15       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+RESERVED_INPUT               : G16       :        :                   :         : 7A        :                
+RESERVED_INPUT               : G17       :        :                   :         : 7A        :                
+VCCIO7A                      : G18       : power  :                   : 3.3V    : 7A        :                
+VCC_AUX                      : G19       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT               : G20       :        :                   :         : 6A        :                
+VCCA_FPLL                    : G21       : power  :                   : 2.5V    :           :                
+LAD[15]                      : G22       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : G23       : gnd    :                   :         :           :                
+LAD[13]                      : G24       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+C[16]                        : G25       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GD_DELAYED[5]                : G26       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+NC                           : H1        :        :                   :         :           :                
+NC                           : H2        :        :                   :         :           :                
+GND                          : H3        : gnd    :                   :         :           :                
+GND                          : H4        : gnd    :                   :         :           :                
+GND                          : H5        :        :                   :         : 9A        :                
+GND                          : H6        : gnd    :                   :         :           :                
+E[28]                        : H7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[25]                        : H8        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+B[30]                        : H9        : input  : 3.3-V LVTTL       :         : 8A        : Y              
+B[15]                        : H10       : input  : 3.3-V LVTTL       :         : 8A        : Y              
+VCCIO7A                      : H11       : power  :                   : 3.3V    : 7A        :                
+B[31]                        : H12       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+A[19]                        : H13       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[1]                       : H14       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+LAD[0]                       : H15       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : H16       : gnd    :                   :         :           :                
+RESERVED_INPUT               : H17       :        :                   :         : 7A        :                
+B[16]                        : H18       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+RESERVED_INPUT               : H19       :        :                   :         : 6A        :                
+nOED                         : H20       : output : 3.3-V LVTTL       :         : 6A        : Y              
+VCCIO6A                      : H21       : power  :                   : 3.3V    : 6A        :                
+D[28]                        : H22       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+LED[5]                       : H23       : output : 3.3-V LVTTL       :         : 6A        : Y              
+LAD[14]                      : H24       : bidir  : 3.3-V LVTTL       :         : 6A        : Y              
+C[17]                        : H25       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : H26       : gnd    :                   :         :           :                
+GND                          : J1        : gnd    :                   :         :           :                
+GND                          : J2        : gnd    :                   :         :           :                
+VCCL_GXBL                    : J3        : power  :                   : 1.1V    :           :                
+GND                          : J4        : gnd    :                   :         :           :                
+MSEL4                        : J5        :        :                   :         : 9A        :                
+VCCA_FPLL                    : J6        : power  :                   : 2.5V    :           :                
+E[12]                        : J7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[9]                         : J8        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+GND                          : J9        : gnd    :                   :         :           :                
+B[14]                        : J10       : input  : 3.3-V LVTTL       :         : 8A        : Y              
+IDD[0]                       : J11       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+SELD                         : J12       : output : 3.3-V LVTTL       :         : 7A        : Y              
+VCC                          : J13       : power  :                   : 1.1V    :           :                
+GND                          : J14       : gnd    :                   :         :           :                
+VCC                          : J15       : power  :                   : 1.1V    :           :                
+RESERVED_INPUT               : J16       :        :                   :         : 7A        :                
+VCC                          : J17       : power  :                   : 1.1V    :           :                
+GND                          : J18       : gnd    :                   :         :           :                
+VCC                          : J19       : power  :                   : 1.1V    :           :                
+C[19]                        : J20       : output : 3.3-V LVTTL       :         : 6A        : Y              
+C[4]                         : J21       : output : 3.3-V LVTTL       :         : 6A        : Y              
+VCCPD6A                      : J22       : power  :                   : 3.3V    : 6A        :                
+IDE[2]                       : J23       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+VCCIO6A                      : J24       : power  :                   : 3.3V    : 6A        :                
+LED[4]                       : J25       : output : 3.3-V LVTTL       :         : 6A        : Y              
+C[18]                        : J26       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GXB_NC                       : K1        :        :                   :         : B1L       :                
+GXB_NC                       : K2        :        :                   :         : B1L       :                
+GND                          : K3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : K4        : power  :                   : 1.1V    :           :                
+MSEL3                        : K5        :        :                   :         : 9A        :                
+E[27]                        : K6        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+VCCIO8A                      : K7        : power  :                   : 3.3V    : 8A        :                
+E[24]                        : K8        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+B[29]                        : K9        : input  : 3.3-V LVTTL       :         : 8A        : Y              
+E[7]                         : K10       : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+B[28]                        : K11       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : K12       : gnd    :                   :         :           :                
+GND                          : K13       : gnd    :                   :         :           :                
+VCC                          : K14       : power  :                   : 1.1V    :           :                
+GND                          : K15       : gnd    :                   :         :           :                
+VCC                          : K16       : power  :                   : 1.1V    :           :                
+GND                          : K17       : gnd    :                   :         :           :                
+VCC                          : K18       : power  :                   : 1.1V    :           :                
+GND                          : K19       : gnd    :                   :         :           :                
+VCC                          : K20       : power  :                   : 1.1V    :           :                
+LED[3]                       : K21       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : K22       : gnd    :                   :         :           :                
+GD_DELAYED[17]               : K23       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GD_START[17]                 : K24       : output : 3.3-V LVTTL       :         : 6A        : Y              
+RESERVED_INPUT               : K25       :        :                   :         : 6A        :                
+RESERVED_INPUT               : K26       :        :                   :         : 6A        :                
+GND                          : L1        : gnd    :                   :         :           :                
+GND                          : L2        : gnd    :                   :         :           :                
+VCCH_GXBL                    : L3        : power  :                   : 2.5V    :           :                
+GND                          : L4        : gnd    :                   :         :           :                
+NC                           : L5        :        :                   :         :           :                
+MSEL1                        : L6        :        :                   :         : 9A        :                
+E[11]                        : L7        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+E[8]                         : L8        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+B[13]                        : L9        : input  : 3.3-V LVTTL       :         : 8A        : Y              
+GND                          : L10       : gnd    :                   :         :           :                
+B[11]                        : L11       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+B[10]                        : L12       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+VCC                          : L13       : power  :                   : 1.1V    :           :                
+GND                          : L14       : gnd    :                   :         :           :                
+VCC                          : L15       : power  :                   : 1.1V    :           :                
+GND                          : L16       : gnd    :                   :         :           :                
+VCC                          : L17       : power  :                   : 1.1V    :           :                
+GND                          : L18       : gnd    :                   :         :           :                
+VCC                          : L19       : power  :                   : 1.1V    :           :                
+GND                          : L20       : gnd    :                   :         :           :                
+VCCPD6A                      : L21       : power  :                   : 3.3V    : 6A        :                
+LED[0]                       : L22       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GD_START[16]                 : L23       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GD_DELAYED[16]               : L24       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : L25       : gnd    :                   :         :           :                
+VREFB6AN0                    : L26       : power  :                   :         : 6A        :                
+GND                          : M1        :        :                   :         : B1L       :                
+GND                          : M2        :        :                   :         : B1L       :                
+GND                          : M3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : M4        : power  :                   : 1.1V    :           :                
+GND                          : M5        : gnd    :                   :         :           :                
+NC                           : M6        :        :                   :         :           :                
+MSEL0                        : M7        :        :                   :         : 9A        :                
+GND                          : M8        : gnd    :                   :         :           :                
+E[23]                        : M9        : bidir  : 3.3-V LVTTL       :         : 8A        : Y              
+RESERVED_INPUT               : M10       :        :                   :         : 8A        :                
+B[12]                        : M11       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+B[27]                        : M12       : input  : 3.3-V LVTTL       :         : 7A        : Y              
+GND                          : M13       : gnd    :                   :         :           :                
+VCC                          : M14       : power  :                   : 1.1V    :           :                
+GND                          : M15       : gnd    :                   :         :           :                
+VCC                          : M16       : power  :                   : 1.1V    :           :                
+GND                          : M17       : gnd    :                   :         :           :                
+VCC                          : M18       : power  :                   : 1.1V    :           :                
+GND                          : M19       : gnd    :                   :         :           :                
+VCC                          : M20       : power  :                   : 1.1V    :           :                
+GD_DELAYED[14]               : M21       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+C[5]                         : M22       : output : 3.3-V LVTTL       :         : 6A        : Y              
+VCCIO6A                      : M23       : power  :                   : 3.3V    : 6A        :                
+nLBRES                       : M24       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GD_START[15]                 : M25       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GD_DELAYED[15]               : M26       : input  : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : N1        : gnd    :                   :         :           :                
+GND                          : N2        : gnd    :                   :         :           :                
+VCCL_GXBL                    : N3        : power  :                   : 1.1V    :           :                
+GND                          : N4        : gnd    :                   :         :           :                
+VCCE_GXBL                    : N5        : power  :                   : 1.1V    :           :                
+GND                          : N6        : gnd    :                   :         :           :                
+GND                          : N7        :        :                   :         : B1L       :                
+DCLK                         : N8        :        :                   :         : 3A        :                
+CLK                          : N9        : input  : 3.3-V LVTTL       :         : 8A        : Y              
+E[22]                        : N10       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : N11       : gnd    :                   :         :           :                
+E[2]                         : N12       : bidir  : 3.3-V LVTTL       :         : 7A        : Y              
+VCC                          : N13       : power  :                   : 1.1V    :           :                
+GND                          : N14       : gnd    :                   :         :           :                
+VCC                          : N15       : power  :                   : 1.1V    :           :                
+GND                          : N16       : gnd    :                   :         :           :                
+VCC                          : N17       : power  :                   : 1.1V    :           :                
+GND                          : N18       : gnd    :                   :         :           :                
+VCC                          : N19       : power  :                   : 1.1V    :           :                
+GD_START[14]                 : N20       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GND                          : N21       : gnd    :                   :         :           :                
+VCCPD5B                      : N22       : power  :                   : 3.3V    : 5B        :                
+C[6]                         : N23       : output : 3.3-V LVTTL       :         : 6A        : Y              
+C[7]                         : N24       : output : 3.3-V LVTTL       :         : 6A        : Y              
+GD_START[4]                  : N25       : output : 3.3-V LVTTL       :         : 5B        : Y              
+VCCIO5B                      : N26       : power  :                   : 3.3V    : 5B        :                
+GXB_NC                       : P1        :        :                   :         : B1L       :                
+GXB_NC                       : P2        :        :                   :         : B1L       :                
+GND                          : P3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : P4        : power  :                   : 1.1V    :           :                
+GND                          : P5        : gnd    :                   :         :           :                
+GND                          : P6        :        :                   :         : B1L       :                
+GND                          : P7        : gnd    :                   :         :           :                
+E[6]                         : P8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+GND                          : P9        : gnd    :                   :         :           :                
+E[17]                        : P10       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+GIN[1]                       : P11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+LED[6]                       : P12       : output : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : P13       : gnd    :                   :         :           :                
+VCC                          : P14       : power  :                   : 1.1V    :           :                
+GND                          : P15       : gnd    :                   :         :           :                
+VCC                          : P16       : power  :                   : 1.1V    :           :                
+GND                          : P17       : gnd    :                   :         :           :                
+VCC                          : P18       : power  :                   : 1.1V    :           :                
+GND                          : P19       : gnd    :                   :         :           :                
+GD_DELAYED[13]               : P20       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+C[20]                        : P21       : output : 3.3-V LVTTL       :         : 5B        : Y              
+C[21]                        : P22       : output : 3.3-V LVTTL       :         : 5B        : Y              
+C[22]                        : P23       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : P24       : gnd    :                   :         :           :                
+VREFB5BN0                    : P25       : power  :                   :         : 5B        :                
+GD_DELAYED[4]                : P26       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : R1        : gnd    :                   :         :           :                
+GND                          : R2        : gnd    :                   :         :           :                
+VCCH_GXBL                    : R3        : power  :                   : 2.5V    :           :                
+GND                          : R4        : gnd    :                   :         :           :                
+VCCE_GXBL                    : R5        : power  :                   : 1.1V    :           :                
+altera_reserved_tms          : R6        : input  : 3.3-V LVTTL       :         : 3A        : N              
+GND                          : R7        : gnd    :                   :         :           :                
+E[21]                        : R8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+E[1]                         : R9        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+B[9]                         : R10       : input  : 3.3-V LVTTL       :         : 3A        : Y              
+B[26]                        : R11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : R12       : gnd    :                   :         :           :                
+VCC                          : R13       : power  :                   : 1.1V    :           :                
+GND                          : R14       : gnd    :                   :         :           :                
+VCC                          : R15       : power  :                   : 1.1V    :           :                
+GND                          : R16       : gnd    :                   :         :           :                
+VCC                          : R17       : power  :                   : 1.1V    :           :                
+GND                          : R18       : gnd    :                   :         :           :                
+VCC                          : R19       : power  :                   : 1.1V    :           :                
+GD_START[13]                 : R20       : output : 3.3-V LVTTL       :         : 5B        : Y              
+VCCPD5B                      : R21       : power  :                   : 3.3V    : 5B        :                
+VCCIO5B                      : R22       : power  :                   : 3.3V    : 5B        :                
+SPI_MOSI                     : R23       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GD_START[12]                 : R24       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GD_DELAYED[12]               : R25       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+GD_DELAYED[3]                : R26       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : T1        :        :                   :         : B1L       :                
+GND                          : T2        :        :                   :         : B1L       :                
+GND                          : T3        : gnd    :                   :         :           :                
+VCCH_GXBL                    : T4        : power  :                   : 2.5V    :           :                
+GND                          : T5        : gnd    :                   :         :           :                
+altera_reserved_tdi          : T6        : input  : 3.3-V LVTTL       :         : 3A        : N              
+E[5]                         : T7        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+E[16]                        : T8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+B[25]                        : T9        : input  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : T10       : gnd    :                   :         :           :                
+B[24]                        : T11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+LED[7]                       : T12       : output : 3.3-V LVTTL       :         : 3B        : Y              
+GIN[0]                       : T13       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+VCC                          : T14       : power  :                   : 1.1V    :           :                
+GND                          : T15       : gnd    :                   :         :           :                
+VCC                          : T16       : power  :                   : 1.1V    :           :                
+F[26]                        : T17       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+VCC                          : T18       : power  :                   : 1.1V    :           :                
+SPI_MISO                     : T19       : input  : 3.3-V LVTTL       :         : 5A        : Y              
+GND                          : T20       : gnd    :                   :         :           :                
+RESERVED_INPUT               : T21       :        :                   :         : 5B        :                
+RESERVED_INPUT               : T22       :        :                   :         : 5B        :                
+SPI_CS                       : T23       : output : 3.3-V LVTTL       :         : 5B        : Y              
+C[23]                        : T24       : output : 3.3-V LVTTL       :         : 5B        : Y              
+VCCIO5B                      : T25       : power  :                   : 3.3V    : 5B        :                
+GD_START[3]                  : T26       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : U1        : gnd    :                   :         :           :                
+GND                          : U2        : gnd    :                   :         :           :                
+VCCL_GXBL                    : U3        : power  :                   : 1.1V    :           :                
+GND                          : U4        : gnd    :                   :         :           :                
+VCCE_GXBL                    : U5        : power  :                   : 1.1V    :           :                
+AS_DATA3, DATA3              : U6        :        :                   :         : 3A        :                
+E[20]                        : U7        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+VCCIO3B                      : U8        : power  :                   : 3.3V    : 3B        :                
+E[0]                         : U9        : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+B[8]                         : U10       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+IDD[2]                       : U11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+RESERVED_INPUT               : U12       :        :                   :         : 4A        :                
+GND                          : U13       : gnd    :                   :         :           :                
+GD_START[30]                 : U14       : output : 3.3-V LVTTL       :         : 4A        : Y              
+F[25]                        : U15       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[10]                        : U16       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+nINT                         : U17       : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : U18       : power  :                   : 3.3V    : 4A        :                
+nBLAST                       : U19       : input  : 3.3-V LVTTL       :         : 5A        : Y              
+SPI_SCLK                     : U20       : output : 3.3-V LVTTL       :         : 5A        : Y              
+VCCPD5A                      : U21       : power  :                   : 3.3V    : 5A        :                
+GD_DELAYED[11]               : U22       : input  : 3.3-V LVTTL       :         : 5A        : Y              
+GND                          : U23       : gnd    :                   :         :           :                
+C[8]                         : U24       : output : 3.3-V LVTTL       :         : 5B        : Y              
+C[9]                         : U25       : output : 3.3-V LVTTL       :         : 5B        : Y              
+WnR                          : U26       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : V1        :        :                   :         : B1L       :                
+GND                          : V2        :        :                   :         : B1L       :                
+GND                          : V3        : gnd    :                   :         :           :                
+GND                          : V4        : gnd    :                   :         :           :                
+GND                          : V5        : gnd    :                   :         :           :                
+GND                          : V6        :        :                   :         : B0L       :                
+altera_reserved_tdo          : V7        : output : 3.3-V LVTTL       :         : 3A        : N              
+E[4]                         : V8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+nOEE                         : V9        : output : 3.3-V LVTTL       :         : 3B        : Y              
+IDF[1]                       : V10       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+VCCIO3B                      : V11       : power  :                   : 3.3V    : 3B        :                
+RESERVED_INPUT               : V12       :        :                   :         : 4A        :                
+nADS                         : V13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[30]               : V14       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[29]                 : V15       : output : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : V16       : gnd    :                   :         :           :                
+F[9]                         : V17       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+B[3]                         : V18       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+F[24]                        : V19       : bidir  : 3.3-V LVTTL       :         : 4A        : Y              
+F[8]                         : V20       : bidir  : 3.3-V LVTTL       :         : 5A        : Y              
+VCCIO5A                      : V21       : power  :                   : 3.3V    : 5A        :                
+GD_START[11]                 : V22       : output : 3.3-V LVTTL       :         : 5A        : Y              
+GD_START[28]                 : V23       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GD_DELAYED[28]               : V24       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+C[10]                        : V25       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : V26       : gnd    :                   :         :           :                
+GND                          : W1        : gnd    :                   :         :           :                
+GND                          : W2        : gnd    :                   :         :           :                
+GXB_NC                       : W3        :        :                   :         : B1L       :                
+GXB_NC                       : W4        :        :                   :         : B1L       :                
+GND                          : W5        : gnd    :                   :         :           :                
+GND                          : W6        :        :                   :         : B0L       :                
+VCCA_FPLL                    : W7        : power  :                   : 2.5V    :           :                
+E[19]                        : W8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+GND                          : W9        : gnd    :                   :         :           :                
+B[7]                         : W10       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+B[6]                         : W11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+B[21]                        : W12       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+B[20]                        : W13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+VCCIO4A                      : W14       : power  :                   : 3.3V    : 4A        :                
+GD_DELAYED[29]               : W15       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[31]                 : W16       : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[31]               : W17       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+B[19]                        : W18       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GND                          : W19       : gnd    :                   :         :           :                
+GD_START[10]                 : W20       : output : 3.3-V LVTTL       :         : 5A        : Y              
+GD_DELAYED[10]               : W21       : input  : 3.3-V LVTTL       :         : 5A        : Y              
+VCCPGM                       : W22       : power  :                   : 3.0V/3.3V :           :                
+VREFB5AN0                    : W23       : power  :                   :         : 5A        :                
+VCCIO5B                      : W24       : power  :                   : 3.3V    : 5B        :                
+C[24]                        : W25       : output : 3.3-V LVTTL       :         : 5B        : Y              
+C[11]                        : W26       : output : 3.3-V LVTTL       :         : 5B        : Y              
+GND                          : Y1        :        :                   :         : B0L       :                
+GND                          : Y2        :        :                   :         : B0L       :                
+GND                          : Y3        : gnd    :                   :         :           :                
+GND                          : Y4        : gnd    :                   :         :           :                
+altera_reserved_tck          : Y5        : input  : 3.3-V LVTTL       :         : 3A        : N              
+nCSO, DATA4                  : Y6        :        :                   :         : 3A        :                
+VCCIO3A                      : Y7        : power  :                   : 3.3V    : 3A        :                
+E[3]                         : Y8        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+F[31]                        : Y9        : bidir  : 3.3-V LVTTL       :         : 3A        : Y              
+F[23]                        : Y10       : bidir  : 3.3-V LVTTL       :         : 3B        : Y              
+B[23]                        : Y11       : input  : 3.3-V LVTTL       :         : 3B        : Y              
+GND                          : Y12       : gnd    :                   :         :           :                
+B[4]                         : Y13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[21]                 : Y14       : output : 3.3-V LVTTL       :         : 4A        : Y              
+RESERVED_INPUT               : Y15       :        :                   :         : 4A        :                
+RESERVED_INPUT               : Y16       :        :                   :         : 4A        :                
+VCCIO4A                      : Y17       : power  :                   : 3.3V    : 4A        :                
+GD_START[24]                 : Y18       : output : 3.3-V LVTTL       :         : 4A        : Y              
+GD_DELAYED[26]               : Y19       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+GD_START[26]                 : Y20       : output : 3.3-V LVTTL       :         : 4A        : Y              
+VCCA_FPLL                    : Y21       : power  :                   : 2.5V    :           :                
+GND                          : Y22       : gnd    :                   :         :           :                
+GD_START[27]                 : Y23       : output : 3.3-V LVTTL       :         : 5A        : Y              
+GD_DELAYED[27]               : Y24       : input  : 3.3-V LVTTL       :         : 5A        : Y              
+IDF[2]                       : Y25       : input  : 3.3-V LVTTL       :         : 5B        : Y              
+IDF[0]                       : Y26       : input  : 3.3-V LVTTL       :         : 5B        : Y              
