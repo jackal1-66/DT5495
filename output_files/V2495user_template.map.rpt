@@ -1,5 +1,5 @@
 Analysis & Synthesis report for V2495user_template
-Tue Sep  5 11:29:49 2023
+Tue Sep  5 11:44:05 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep  5 11:29:49 2023      ;
+; Analysis & Synthesis Status     ; Successful - Tue Sep  5 11:44:05 2023      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; V2495user_template                         ;
 ; Top-level Entity Name           ; V2495                                      ;
@@ -247,14 +247,14 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 672       ;
+; Estimate of Logic utilization (ALMs needed) ; 671       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 585       ;
+; Combinational ALUT usage for logic          ; 581       ;
 ;     -- 7 input functions                    ; 13        ;
-;     -- 6 input functions                    ; 139       ;
-;     -- 5 input functions                    ; 89        ;
-;     -- 4 input functions                    ; 101       ;
-;     -- <=3 input functions                  ; 243       ;
+;     -- 6 input functions                    ; 138       ;
+;     -- 5 input functions                    ; 91        ;
+;     -- 4 input functions                    ; 99        ;
+;     -- <=3 input functions                  ; 240       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 1171      ;
 ;                                             ;           ;
@@ -264,7 +264,7 @@ applicable agreement for further details.
 ; Total DSP Blocks                            ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 834       ;
-; Total fan-out                               ; 7223      ;
+; Total fan-out                               ; 7220      ;
 ; Average fan-out                             ; 2.86      ;
 +---------------------------------------------+-----------+
 
@@ -274,13 +274,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                         ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |V2495                                                                                                  ; 585 (1)           ; 1171 (10)    ; 3200              ; 0          ; 312  ; 0            ; |V2495                                                                                                                                                                                                                                                                                                                                      ; work         ;
+; |V2495                                                                                                  ; 581 (1)           ; 1171 (10)    ; 3200              ; 0          ; 312  ; 0            ; |V2495                                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;    |gd_control:I_GD|                                                                                    ; 152 (84)          ; 332 (112)    ; 0                 ; 0          ; 0    ; 0            ; |V2495|gd_control:I_GD                                                                                                                                                                                                                                                                                                                      ; work         ;
 ;       |spi_interface:I_SPI|                                                                             ; 68 (34)           ; 220 (107)    ; 0                 ; 0          ; 0    ; 0            ; |V2495|gd_control:I_GD|spi_interface:I_SPI                                                                                                                                                                                                                                                                                                  ; work         ;
 ;          |spi_master:spi_core|                                                                          ; 34 (34)           ; 113 (113)    ; 0                 ; 0          ; 0    ; 0            ; |V2495|gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core                                                                                                                                                                                                                                                                              ; work         ;
 ;    |lb_int:I_LBUS_INTERFACE|                                                                            ; 104 (104)         ; 167 (167)    ; 0                 ; 0          ; 0    ; 0            ; |V2495|lb_int:I_LBUS_INTERFACE                                                                                                                                                                                                                                                                                                              ; work         ;
-;    |sld_hub:auto_hub|                                                                                   ; 98 (1)            ; 90 (0)       ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 97 (65)           ; 90 (62)      ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
+;    |sld_hub:auto_hub|                                                                                   ; 94 (1)            ; 90 (0)       ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 93 (61)           ; 90 (62)      ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 15 (15)           ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0                 ; 0          ; 0    ; 0            ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ; work         ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 230 (1)           ; 572 (50)     ; 3200              ; 0          ; 0    ; 0            ; |V2495|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ; work         ;
@@ -580,7 +580,7 @@ Encoding Type:  One-Hot
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                       ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0] ;
 ; 6:1                ; 9 bits    ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 68 LEs               ; 20 LEs                 ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[0]                      ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[0]                      ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |V2495|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[3]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
 
@@ -772,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Sep  5 11:29:45 2023
+    Info: Processing started: Tue Sep  5 11:44:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off V2495user_template -c V2495user_template
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file src/V2495_package.vhd
@@ -798,9 +798,10 @@ Warning (10445): VHDL Subtype or Type Declaration warning at V2495_package.vhd(3
 Warning (10541): VHDL Signal Declaration warning at V2495.vhd(41): used implicit default value for signal "SELG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at V2495.vhd(101): used implicit default value for signal "mon_regs" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at V2495.vhd(102): object "ctrl_regs" assigned a value but never read
-Warning (10296): VHDL warning at V2495.vhd(206): ignored assignment of value to null range
-Warning (10296): VHDL warning at V2495.vhd(207): ignored assignment of value to null range
-Warning (10873): Using initial value X (don't care) for net "C[31..8]" at V2495.vhd(37)
+Warning (10296): VHDL warning at V2495.vhd(211): ignored assignment of value to null range
+Warning (10296): VHDL warning at V2495.vhd(212): ignored assignment of value to null range
+Warning (10873): Using initial value X (don't care) for net "C[31..24]" at V2495.vhd(37)
+Warning (10873): Using initial value X (don't care) for net "C[15..8]" at V2495.vhd(37)
 Info (12128): Elaborating entity "lb_int" for hierarchy "lb_int:I_LBUS_INTERFACE"
 Warning (10296): VHDL warning at lb_int.vhd(91): ignored assignment of value to null range
 Warning (10296): VHDL warning at lb_int.vhd(115): ignored assignment of value to null range
@@ -849,7 +850,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "F[14]" has no driver
     Warning (13040): Bidir "F[30]" has no driver
     Warning (13040): Bidir "F[15]" has no driver
-    Warning (13040): Bidir "F[31]" has no driver
     Warning (13040): Bidir "E[2]" has no driver
     Warning (13040): Bidir "E[3]" has no driver
     Warning (13040): Bidir "E[4]" has no driver
@@ -898,6 +898,7 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "F[27]" has no driver
     Warning (13040): Bidir "F[28]" has no driver
     Warning (13040): Bidir "F[29]" has no driver
+    Warning (13040): Bidir "F[31]" has no driver
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "E[0]~synth"
     Warning (13010): Node "E[1]~synth"
@@ -916,14 +917,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "C[13]" is stuck at GND
     Warning (13410): Pin "C[14]" is stuck at GND
     Warning (13410): Pin "C[15]" is stuck at GND
-    Warning (13410): Pin "C[16]" is stuck at GND
-    Warning (13410): Pin "C[17]" is stuck at GND
-    Warning (13410): Pin "C[18]" is stuck at GND
-    Warning (13410): Pin "C[19]" is stuck at GND
-    Warning (13410): Pin "C[20]" is stuck at GND
-    Warning (13410): Pin "C[21]" is stuck at GND
-    Warning (13410): Pin "C[22]" is stuck at GND
-    Warning (13410): Pin "C[23]" is stuck at GND
     Warning (13410): Pin "C[24]" is stuck at GND
     Warning (13410): Pin "C[25]" is stuck at GND
     Warning (13410): Pin "C[26]" is stuck at GND
@@ -940,13 +933,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "nOEF" is stuck at VCC
     Warning (13410): Pin "nINT" is stuck at VCC
 Warning (18029): Output pin "C[0]" driven by bidirectional pin "F[2]" cannot be tri-stated
-Warning (18029): Output pin "C[2]" driven by bidirectional pin "F[3]" cannot be tri-stated
-Warning (18029): Output pin "C[4]" driven by bidirectional pin "F[14]" cannot be tri-stated
-Warning (18029): Output pin "C[6]" driven by bidirectional pin "F[15]" cannot be tri-stated
-Warning (18029): Output pin "C[1]" driven by bidirectional pin "F[18]" cannot be tri-stated
-Warning (18029): Output pin "C[3]" driven by bidirectional pin "F[19]" cannot be tri-stated
-Warning (18029): Output pin "C[5]" driven by bidirectional pin "F[30]" cannot be tri-stated
-Warning (18029): Output pin "C[7]" driven by bidirectional pin "F[31]" cannot be tri-stated
+Warning (18029): Output pin "C[1]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[2]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[3]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[4]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[5]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[6]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[7]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[16]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[17]" driven by bidirectional pin "F[2]" cannot be tri-stated
+Warning (18029): Output pin "C[19]" driven by bidirectional pin "F[3]" cannot be tri-stated
+Warning (18029): Output pin "C[21]" driven by bidirectional pin "F[14]" cannot be tri-stated
+Warning (18029): Output pin "C[23]" driven by bidirectional pin "F[15]" cannot be tri-stated
+Warning (18029): Output pin "C[18]" driven by bidirectional pin "F[18]" cannot be tri-stated
+Warning (18029): Output pin "C[20]" driven by bidirectional pin "F[19]" cannot be tri-stated
+Warning (18029): Output pin "C[22]" driven by bidirectional pin "F[30]" cannot be tri-stated
 Warning (18029): Output pin "pre_syn.bp.I_LBUS_INTERFACE_LAD_0_" driven by bidirectional pin "LAD[0]" cannot be tri-stated
 Warning (18029): Output pin "pre_syn.bp.I_LBUS_INTERFACE_LAD_1_" driven by bidirectional pin "LAD[1]" cannot be tri-stated
 Warning (18029): Output pin "pre_syn.bp.I_LBUS_INTERFACE_LAD_2_" driven by bidirectional pin "LAD[2]" cannot be tri-stated
@@ -1069,16 +1070,16 @@ Warning (21074): Design contains 98 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GD_DELAYED[29]"
     Warning (15610): No output dependent on input pin "GD_DELAYED[30]"
     Warning (15610): No output dependent on input pin "GD_DELAYED[31]"
-Info (21057): Implemented 1791 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1787 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 116 input pins
     Info (21059): Implemented 88 output pins
     Info (21060): Implemented 112 bidirectional pins
-    Info (21061): Implemented 1449 logic cells
+    Info (21061): Implemented 1445 logic cells
     Info (21064): Implemented 25 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 246 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 247 warnings
     Info: Peak virtual memory: 830 megabytes
-    Info: Processing ended: Tue Sep  5 11:29:49 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Tue Sep  5 11:44:05 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

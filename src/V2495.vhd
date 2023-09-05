@@ -170,24 +170,29 @@ begin --
     E(13)   <= B(6);
     E(29)   <= B(7);
     
-    -- NIM to LVDS (using channels 0 to 7 from LVDS slot C as output)
+    -- NIM to LVDS (First 10 LVDS channels are used for the spill)
+	 -- Breakout board 1 contains only 8
     C(0)    <= F(2) ;
-    C(1)    <= F(18);
-    C(2)    <= F(3) ;
-    C(3)    <= F(19);
-    C(4)    <= F(14);
-    C(5)    <= F(30);
-    C(6)    <= F(15);
-    C(7)    <= F(31);
+	 C(1)    <= F(2) ;
+	 C(2)    <= F(2) ;
+	 C(3)    <= F(2) ;
+	 C(4)    <= F(2) ;
+	 C(5)    <= F(2) ;
+	 C(6)    <= F(2) ;
+	 C(7)    <= F(2) ;
 	 
-	 -- Setup FanOut NIM to LVDS (ports 8 to 10 NIM0, 17-19 NIM1)
-	 
-	 --C(8)		<= F(2);
-	 --C(9)		<= F(2);
-	 --C(10)	<= F(2);
-	 --C(17)	<= F(18);
-	 --C(18)	<= F(18);
-	 --C(19)	<= F(18);
+	 --Breakout board 2 contains 2 spill signals + 6 triggers
+	 C(16)    <= F(2) ;
+	 C(17)    <= F(2) ;
+	 -- Here the triggers are routed to the LVDS channels
+	 C(18)    <= F(18);
+    C(19)    <= F(3) ;
+    C(20)    <= F(19);
+    C(21)    <= F(14);
+    C(22)    <= F(30);
+    C(23)    <= F(15);
+	 --Last LEMO channel is not used, kept here commented for precaution
+	 --C(7)    <= F(31);	 
 
     -- --------------------------
     --  Local Bus slave interface
