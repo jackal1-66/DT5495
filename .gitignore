@@ -1,0 +1,4 @@
+*.cnf.cdb
+*.cnf.hdb
+db/
+incremental_db/
