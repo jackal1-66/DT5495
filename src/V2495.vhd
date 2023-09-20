@@ -124,6 +124,7 @@ begin --
 	 -- Setting of G ports (G0 output, G1 input)
 	 -- nOEG must be set to 0 for mixed input/output
 	 -- GOUT(NGinput) must be also set to 0
+	 SELG    <= '0';
 	 nOEG		<= '0';
 	 GOUT(1)	<= '0';
 	 GOUT(0)	<= '1';
@@ -131,7 +132,7 @@ begin --
 	 nim_ttl_sel: process(clk)
 	 begin
 		if rising_edge(clk) then
-			if(GIN(1) = '1') then	--LEMO connected from G0 to G1
+			if(GIN(1) = '0') then	--LEMO connected from G0 to G1
 				--Set ports E/F to TTL => '1'
 				SELE <= '1';
 				SELF <= '1';
