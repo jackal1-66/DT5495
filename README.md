@@ -13,3 +13,13 @@ breakout board (8 channels per cable).
 By default the handling of the signals is NIM based, however to handle TTL signals you can simply 
 connect a LEMO cable between G0 and G1 LEMO sockets. The LEDS (OFF by default) will turn ON when the cable is
 connected indicating the change in signal standards. 
+
+# Install firmware on DT5495
+The firmware must be installed via USB (easiest option) using the CAENUpgraderGUI (v1.7.7 version provided in this REPO). 
+After installing the program, open it and select Upgrade Firmware on the Available options. Then follow the instructions:
+ - Board model --> DT5495
+ - Firmware binary file --> Browse to the .RPD file and select it
+ - Be sure the USB link is selected correctly
+ - Be sure USER FPGA is selected
+ - Upgrade
+This can take few minutes. After flashing the firmware reboot the logic unit. 
