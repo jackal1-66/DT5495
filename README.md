@@ -18,7 +18,7 @@ connected indicating the change in signal standards.
 The firmware must be installed via USB (easiest option) using the CAENUpgraderGUI (v1.7.7 version provided in this REPO). 
 After installing the program, open it and select Upgrade Firmware on the Available options. Then follow the instructions:
  - Board model --> DT5495
- - Firmware binary file --> Browse to the .RPD file and select it
+ - Firmware binary file --> Browse to the .RPD file and select it (in output_files folder in this repo)
  - Be sure the USB link is selected correctly
  - Be sure USER FPGA is selected
  - Upgrade
