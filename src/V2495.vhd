@@ -109,12 +109,14 @@ architecture rtl of V2495 is
     signal gd_data_wr   :  std_logic_vector(31 downto 0);
     signal gd_data_rd   :  std_logic_vector(31 downto 0);
     signal gd_command   :  std_logic_vector(15 downto 0);
+	 signal spill			:  std_logic := '0';
+	 signal ext_clk		:	std_logic := '0';
+	 signal async_spill  :  std_logic := '0';
           
 -----\
 begin --
------/
-
-
+-----/			
+	 
     -- Unused output ports are explicitally set to HiZ 
     -- ----------------------------------------------------
     SELD <= 'Z';
@@ -162,7 +164,7 @@ begin --
 
     -- Routing NIM to LVDS and viceversa following CAEN specifications
     -- LVDS to NIM (using channels 0 to 7 from LVDS slot B as input)
-    E(0)    <= B(0);
+    --E(0)    <= B(0); --B(0) is used now for clock inputs and latch on SPILL
     E(16)   <= B(1);
     E(1)    <= B(2);
     E(17)   <= B(3);
@@ -171,29 +173,78 @@ begin --
     E(13)   <= B(6);
     E(29)   <= B(7);
     
+	 --	 Last LEMO channel on the left on board C used for ext clock
+	 -- 	 Only spill is made synchronous to ext clock
+	 ext_clk    <= B(0); -- was F(31) as last lemo channel, but testing with direct LVDS signal due to speed issues	 
+	 
     -- NIM to LVDS (First 10 LVDS channels are used for the spill)
 	 -- Breakout board 1 contains only 8
-    C(0)    <= F(2) ;
-	 C(1)    <= F(2) ;
-	 C(2)    <= F(2) ;
-	 C(3)    <= F(2) ;
-	 C(4)    <= F(2) ;
-	 C(5)    <= F(2) ;
-	 C(6)    <= F(2) ;
-	 C(7)    <= F(2) ;
+
+	 
+	 spill_set: process(ext_clk)
+	 begin
+		if(rising_edge(ext_clk)) then
+			if (F(2) = '0') then
+				spill <= '1';
+			else
+				spill <= '0';
+			end if;	
+		end if;
+	 end process;
+	 
+	 with F(2) select async_spill <=
+		'1' when '0',
+		'0' when others;
+	 
+	 C(0)    <= spill ; 
+	 C(1)    <= spill ;
+	 C(2)    <= spill ;
+	 C(3)    <= spill ;
+	 C(4)    <= spill ;
+	 C(5)    <= spill ;
+	 C(6)    <= spill ;
+	 C(7)    <= spill ;
 	 
 	 --Breakout board 2 contains 2 spill signals + 6 triggers
-	 C(16)    <= F(2) ;
-	 C(17)    <= F(2) ;
+	 C(16)    <= spill ;
+	 C(17)    <= spill ;
+	 
 	 -- Here the triggers are routed to the LVDS channels
-	 C(18)    <= F(18);
-    C(19)    <= F(3) ;
-    C(20)    <= F(19);
-    C(21)    <= F(14);
-    C(22)    <= F(30);
-    C(23)    <= F(15);
-	 --Last LEMO channel is not used, kept here commented for precaution
-	 --C(7)    <= F(31);	 
+	 
+	 with F(18) select C(18) <=
+		'1' when '1',
+		'0' when others;
+		
+    with F(3) select C(19) <=
+		'1' when '1',
+		'0' when others;
+		
+	 with F(19) select C(20) <=
+		'1' when '1',
+		'0' when others;
+		
+	 with F(14) select C(21) <=
+		'1' when '1',
+		'0' when others;
+		
+	 with F(30) select C(22) <=
+		'1' when '1',
+		'0' when others;
+	 
+--	 with F(15) select C(23) <=
+--		'1' when '1',
+--		'0' when others;
+
+--  C(23) LVDS output is now the async SPILL signal
+
+	 C(23) <= async_spill;
+		
+--	   C(18)    <= F(18);
+--    C(19)    <= F(3) ;
+--    C(20)    <= F(19);
+--    C(21)    <= F(14);
+--    C(22)    <= F(30);
+--    C(23)    <= F(15);
 
     -- --------------------------
     --  Local Bus slave interface
