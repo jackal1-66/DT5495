@@ -111,12 +111,13 @@ architecture rtl of V2495 is
     signal gd_command   :  std_logic_vector(15 downto 0);
 	 signal spill			:  std_logic := '0';
 	 signal ext_clk		:	std_logic := '0';
+	 signal sig_sel_sp	:  std_logic := '0';
 	 signal async_spill  :  std_logic := '0';
           
 -----\
 begin --
------/			
-	 
+-----/				
+	 -- As per CAEN specifics, remember than for NIM logic signals are inverted
     -- Unused output ports are explicitally set to HiZ 
     -- ----------------------------------------------------
     SELD <= 'Z';
@@ -125,32 +126,34 @@ begin --
 	 
 	 -- Setting of G ports (G0 output, G1 input)
 	 -- nOEG must be set to 0 for mixed input/output
+	 -- 1 for input only
 	 -- GOUT(NGinput) must be also set to 0
-	 SELG    <= '0';
-	 nOEG		<= '0';
+	 SELG    <= '1';	-- 0 NIM, 1 TTL 
+	 nOEG		<= '0';  -- mixed output/input mode selected
 	 GOUT(1)	<= '0';
 	 GOUT(0)	<= '1';
+	 
+	 --Set ports E/F to NIM => '0'
+  	 SELE <= '0';
+	 SELF <= '0';
+	 -- All LEDs OFF NIM mode
     
-	 nim_ttl_sel: process(clk)
+	 -- G0 used to select latched or not clock
+	 clock_sel: process(GIN(1))
 	 begin
-		if rising_edge(clk) then
-			if(GIN(1) = '0') then	--LEMO connected from G0 to G1
-				--Set ports E/F to TTL => '1'
-				SELE <= '1';
-				SELF <= '1';
-				-- All LEDs ON TTL mode
-				LED <= "11111111";
-			else 					--default, no LEMO attached
-				--Set ports E/F to NIM => '1'
-				SELE <= '0';
-				SELF <= '0';
-				-- All LEDs OFF NIM mode
-				LED <= "00000000";
-			end if;	
+		if(GIN(1) = '1') then	--spill not latched, LEMO connected //0 if NIM, 1 if TTL
+			sig_sel_sp <= '1';
+			-- All LEDs ON
+			LED <= "11111111";
+		else 					--default, spill latched to external clock
+			--Set ports E/F to NIM => '1'
+			sig_sel_sp <= '0';
+			-- All LEDs OFF in default mode
+			LED <= "00000000";
 		end if;	
 	 end process;
 
-    -- Setting boards in input (0) or output mode (1)
+   -- Setting boards in input (0) or output mode (1)
     nOEE <= '0';
     nOEF <= '1';
     
@@ -181,7 +184,7 @@ begin --
 	 -- Breakout board 1 contains only 8
 
 	 
-	 spill_set: process(ext_clk)
+	 sync_spill_set: process(ext_clk)
 	 begin
 		if(rising_edge(ext_clk)) then
 			if (F(2) = '0') then
@@ -195,49 +198,61 @@ begin --
 	 with F(2) select async_spill <=
 		'1' when '0',
 		'0' when others;
-	 
-	 C(0)    <= spill ; 
-	 C(1)    <= spill ;
-	 C(2)    <= spill ;
-	 C(3)    <= spill ;
-	 C(4)    <= spill ;
-	 C(5)    <= spill ;
-	 C(6)    <= spill ;
-	 C(7)    <= spill ;
-	 
-	 --Breakout board 2 contains 2 spill signals + 6 triggers
-	 C(16)    <= spill ;
-	 C(17)    <= spill ;
+		
+	 output_spill_set: process(sig_sel_sp)
+	 begin
+		if(sig_sel_sp = '1') then
+			C(0)    <= async_spill ; 
+			C(1)    <= async_spill ;
+			C(2)    <= async_spill ;
+			C(3)    <= async_spill ;
+			C(4)    <= async_spill ;
+			C(5)    <= async_spill ;
+			C(6)    <= async_spill ;
+			C(7)    <= async_spill ;
+			--Breakout board 2 contains 4 spill signals + 4 triggers
+			C(16)   <= async_spill ;
+			C(17)   <= async_spill ;
+			C(18)   <= async_spill ;
+			C(19)   <= async_spill ;
+		else	
+			C(0)    <= spill ; 
+			C(1)    <= spill ;
+			C(2)    <= spill ;
+			C(3)    <= spill ;
+			C(4)    <= spill ;
+			C(5)    <= spill ;
+			C(6)    <= spill ;
+			C(7)    <= spill ;
+			--Breakout board 2 contains 4 spill signals + 4 triggers
+			C(16)   <= spill ;
+			C(17)   <= spill ;
+			C(18)   <= spill ;
+			C(19)   <= spill ;
+		end if;	
+	 end process;
 	 
 	 -- Here the triggers are routed to the LVDS channels
-	 
-	 with F(18) select C(18) <=
+		
+	 with F(18) select C(20) <=
 		'1' when '1',
 		'0' when others;
 		
-    with F(3) select C(19) <=
+	 with F(3) select C(21) <=
 		'1' when '1',
 		'0' when others;
 		
-	 with F(19) select C(20) <=
-		'1' when '1',
-		'0' when others;
-		
-	 with F(14) select C(21) <=
-		'1' when '1',
-		'0' when others;
-		
-	 with F(30) select C(22) <=
+	 with F(19) select C(22) <=
 		'1' when '1',
 		'0' when others;
 	 
---	 with F(15) select C(23) <=
---		'1' when '1',
---		'0' when others;
+	 with F(14) select C(23) <=
+		'1' when '1',
+		'0' when others;
 
---  C(23) LVDS output is now the async SPILL signal
+--  C(24) LVDS output is now the async SPILL signal for testing
 
-	 C(23) <= async_spill;
+	 C(24) <= async_spill;
 		
 --	   C(18)    <= F(18);
 --    C(19)    <= F(3) ;
