@@ -187,32 +187,26 @@ begin --
 	 C(6)    <= spill ;
 	 C(7)    <= spill ;
 	 
-	 --Breakout board 2 contains 2 spill signals + 6 triggers
+	 --Breakout board 2 contains 4 spill signals + 4 triggers
 	 C(16)    <= spill ;
 	 C(17)    <= spill ;
+	 C(18)    <= spill ;
+	 C(19)    <= spill ;
 	 -- Here the triggers are routed to the LVDS channels
-	 
-	 with F(18) select C(18) <=
+		
+	 with F(18) select C(20) <=
 		'1' when '1',
 		'0' when others;
 		
-    with F(3) select C(19) <=
+	 with F(3) select C(21) <=
 		'1' when '1',
 		'0' when others;
 		
-	 with F(19) select C(20) <=
-		'1' when '1',
-		'0' when others;
-		
-	 with F(14) select C(21) <=
-		'1' when '1',
-		'0' when others;
-		
-	 with F(30) select C(22) <=
+	 with F(19) select C(22) <=
 		'1' when '1',
 		'0' when others;
 	 
-	 with F(15) select C(23) <=
+	 with F(14) select C(23) <=
 		'1' when '1',
 		'0' when others;
 		
