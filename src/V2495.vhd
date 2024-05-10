@@ -144,12 +144,12 @@ begin --
 		if(GIN(1) = '1') then	--spill not latched, LEMO connected //0 if NIM, 1 if TTL
 			sig_sel_sp <= '1';
 			-- All LEDs ON
-			LED <= "11111111";
+			LED(7 downto 5) <= "111";
 		else 					--default, spill latched to external clock
 			--Set ports E/F to NIM => '1'
 			sig_sel_sp <= '0';
 			-- All LEDs OFF in default mode
-			LED <= "00000000";
+			LED(7 downto 5) <= "000";
 		end if;	
 	 end process;
 
@@ -189,8 +189,10 @@ begin --
 		if(rising_edge(ext_clk)) then
 			if (F(2) = '0') then
 				spill <= '1';
+				LED(4) <= '1';
 			else
 				spill <= '0';
+				LED(4) <= '0';
 			end if;	
 		end if;
 	 end process;
@@ -231,23 +233,41 @@ begin --
 			C(19)   <= spill ;
 		end if;	
 	 end process;
+		
+	 -- trigger LEDs select
+	 
+	 with F(18) select LED(3) <=
+		'1' when '0',
+		'0' when others;
+		
+	 with F(3) select LED(2) <=
+		'1' when '0',
+		'0' when others;
+	 
+	 with F(19) select LED(1) <=
+		'1' when '0',
+		'0' when others; 
+	
+    with F(14) select LED(0) <=
+		'1' when '0',
+		'0' when others;	
 	 
 	 -- Here the triggers are routed to the LVDS channels
 		
 	 with F(18) select C(20) <=
-		'1' when '1',
+		'1' when '0',
 		'0' when others;
 		
 	 with F(3) select C(21) <=
-		'1' when '1',
+		'1' when '0',
 		'0' when others;
 		
 	 with F(19) select C(22) <=
-		'1' when '1',
+		'1' when '0',
 		'0' when others;
 	 
 	 with F(14) select C(23) <=
-		'1' when '1',
+		'1' when '0',
 		'0' when others;
 
 --  C(24) LVDS output is now the async SPILL signal for testing
